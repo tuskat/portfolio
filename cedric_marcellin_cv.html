@@ -91,10 +91,10 @@
     flex-direction: column;
   }
 
-  /* ── WAVES (fixed background layer on every page) ── */
+  /* ── WAVES ── */
   .wave-bg {
     position: absolute;
-    bottom: 14px; /* sits above bottom-bar */
+    bottom: 14px;
     left: 0;
     width: 100%;
     height: 260px;
@@ -103,14 +103,13 @@
   }
   .wave-bg svg { width: 100%; height: 100%; }
 
-  /* content above waves */
   .cv-page > *:not(.wave-bg) { position: relative; z-index: 1; }
 
   /* ── TOP / BOTTOM BARS ── */
   .top-bar { background: var(--teal); height: 14px; flex-shrink: 0; }
   .bottom-bar { background: var(--teal); height: 14px; margin-top: auto; flex-shrink: 0; }
 
-  /* ── PAGE BODY (scrollable inner area) ── */
+  /* ── PAGE BODY ── */
   .page-body {
     flex: 1;
     overflow: hidden;
@@ -190,8 +189,20 @@
   .exp-row:last-child { border-bottom: none; margin-bottom: 0; }
   .exp-date { font-size: 11.5px; color: var(--text3); line-height: 1.6; }
   .exp-company { font-size: 13.5px; font-weight: 500; color: var(--text); }
-  .exp-role { font-size: 12px; color: var(--text2); font-style: italic; margin-bottom: 2px; }
-  .exp-tools { font-size: 11.5px; color: var(--text3); line-height: 1.55; }
+  .exp-company-desc { font-size: 11px; color: var(--text3); margin-bottom: 1px; }
+  .exp-role { font-size: 12px; color: var(--text2); font-style: italic; margin-bottom: 3px; }
+  .exp-tools { font-size: 11.5px; color: var(--text3); line-height: 1.55; margin-bottom: 4px; }
+
+  .exp-bullets { list-style: none; padding: 0; margin-top: 4px; }
+  .exp-bullets li {
+    font-size: 11.5px;
+    color: var(--text2);
+    line-height: 1.6;
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 2px;
+  }
+  .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--teal); }
 
   /* ── INTERNSHIPS ── */
   .intern-label {
@@ -217,7 +228,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    padding-bottom: 260px; /* space for waves */
+    padding-bottom: 0;
   }
 
   /* ── SKILLS ── */
@@ -239,8 +250,9 @@
   .edu-year { font-size: 11.5px; color: var(--text3); white-space: nowrap; }
 
   /* ── INTERESTS ── */
-  .interests { font-size: 12.5px; color: var(--text3); display: flex; align-items: flex-start; gap: 5px; }
+  .interests { font-size: 12px; color: var(--text3); display: flex; align-items: flex-start; gap: 5px; line-height: 1.6; }
   .interests::before { content: '▶'; font-size: 9px; color: var(--teal); margin-top: 2px; flex-shrink: 0; }
+  .interests a { color: var(--teal); text-decoration: none; }
 
   /* ── RECOMMENDATIONS ── */
   .rec-block {
@@ -254,7 +266,7 @@
   .rec-title-line { font-size: 11px; color: var(--text3); margin-bottom: 5px; }
   .rec-text { font-size: 12px; color: var(--text2); line-height: 1.65; font-style: italic; }
 
-  /* ── PAGE 2 HEADER (small, repeated branding) ── */
+  /* ── PAGE 2 HEADER ── */
   .p2-name {
     font-size: 13px;
     font-weight: 400;
@@ -266,7 +278,12 @@
     margin-bottom: 0;
   }
 
-  /* ── PRINT ── */
+  /* ── LIGHT MODE: no decorative chrome ── */
+  body.light .top-bar,
+  body.light .bottom-bar,
+  body.light .wave-bg { display: none; }
+
+  /* ── PRINT: use light mode, no decorative chrome ── */
   @media print {
     body { background: white; padding: 0; gap: 0; }
     .controls { display: none; }
@@ -305,8 +322,8 @@
       <h1>CÉDRIC MARCELLIN</h1>
       <div class="subtitle">
         <span class="dot"></span>
-        <span class="en">Senior Web Developer</span>
-        <span class="fr">Développeur Web Senior</span>
+        <span class="en">Senior Frontend Developer</span>
+        <span class="fr">Développeur Frontend Senior</span>
         <span class="dot"></span>
       </div>
     </div>
@@ -319,19 +336,21 @@
           <span class="fr">Profil</span>
         </div>
         <hr class="div">
-        <p class="career-summary en">Senior Frontend Developer with 10+ years of experience building high-quality web products. Master's in IT, strong problem-solving skills, and a proven track record delivering under tight timelines across diverse stacks and teams.</p>
-        <p class="career-summary fr">Développeur Frontend Senior avec plus de 10 ans d'expérience dans la création de produits web de qualité. Master en informatique, solides compétences en résolution de problèmes et habitude de livrer dans les délais sur des stacks variées.</p>
+        <p class="career-summary en">Senior Frontend Developer with 10+ years of continuous ownership on the same core product — growing from junior to the most senior engineer while the stack evolved from Ruby on Rails through multiple generations of React. Along the way: firmware UI for a physical router, a browser-based password manager, and high-conversion landing pages contributing measurably to one of the world's largest VPN providers. Side projects in Flutter and Unity/C# because some people just can't stop.</p>
+        <p class="career-summary fr">Développeur Frontend Senior avec plus de 10 ans d'implication continue sur le même produit — passant de junior au plus senior de l'équipe pendant que le stack évoluait de Ruby on Rails à plusieurs générations de React. En chemin : UI de firmware pour routeur physique, gestionnaire de mots de passe, et pages d'atterrissage à fort taux de conversion pour l'un des plus grands fournisseurs VPN au monde. Projets perso en Flutter et Unity/C# parce que certains ne savent pas s'arrêter.</p>
       </div>
       <div class="contact-panel">
-        <div style="font-size:14px;font-weight:400;color:var(--text2);margin-top:22px;margin-bottom:6px;">Contact</div>
+        <div style="font-size:14px;font-weight:400;color:var(--text2);margin-top:4px;margin-bottom:6px;">Contact</div>
         <div class="cl en">Location</div>
         <div class="cl fr">Localisation</div>
         <div class="cv-val">Galapagar, Spain</div>
         <div class="cl en">Phone</div>
         <div class="cl fr">Téléphone</div>
-        <div class="cv-val">+34 60 70 23 935</div>
+        <div class="cv-val">+34 607 023 935</div>
         <div class="cl">Email</div>
         <div><a href="mailto:cedric.marcellin@gmail.com">cedric.marcellin@gmail.com</a></div>
+        <div class="cl">LinkedIn</div>
+        <div><a href="https://www.linkedin.com/in/cedric-marcellin-70317889/">cedric-marcellin</a></div>
         <div class="cl en">Portfolio</div>
         <div class="cl fr">Portfolio</div>
         <div><a href="https://cedricmarcellin.dev">cedricmarcellin.dev</a></div>
@@ -349,9 +368,17 @@
       <div class="exp-date">Jan 2025 – <span class="en">Present</span><span class="fr">Présent</span><br>1 <span class="en">yr</span><span class="fr">an</span> 4 <span class="en">mos</span><span class="fr">mois</span><br>Madrid · Remote</div>
       <div>
         <div class="exp-company">Self-employed</div>
-        <div class="exp-role en">Senior Web Developer · Notable client: ExpressVPN</div>
-        <div class="exp-role fr">Développeur Web Senior · Client notable : ExpressVPN</div>
+        <div class="exp-role en">Senior Frontend Developer · Notable client: ExpressVPN</div>
+        <div class="exp-role fr">Développeur Frontend Senior · Client notable : ExpressVPN</div>
         <div class="exp-tools">Stack: Vue.js, Astro, TypeScript, Node.js, REST APIs</div>
+        <ul class="exp-bullets">
+          <li class="en">Maintained and stabilised the Rails codebase as the team's primary Rails resource during the transition period</li>
+          <li class="fr">Maintenance et stabilisation de la base Rails en tant que référent principal pendant la période de transition</li>
+          <li class="en">Resolved breaking issues and content-critical fixes across live customer-facing pages</li>
+          <li class="fr">Résolution de bugs critiques et correctifs de contenu sur les pages clients en production</li>
+          <li class="en">Contributed to the migration toward a Next.js architecture</li>
+          <li class="fr">Contribution à la migration vers une architecture Next.js</li>
+        </ul>
       </div>
     </div>
 
@@ -359,9 +386,25 @@
       <div class="exp-date">Jul 2017 – Dec 2024<br>7 <span class="en">yrs</span><span class="fr">ans</span> 6 <span class="en">mos</span><span class="fr">mois</span><br>Hong Kong · Hybrid</div>
       <div>
         <div class="exp-company">Network Guard</div>
+        <div class="exp-company-desc en">Cybersecurity & VPN — primary contractor to ExpressVPN</div>
+        <div class="exp-company-desc fr">Cybersécurité & VPN — prestataire principal d'ExpressVPN</div>
         <div class="exp-role en">Senior Frontend Developer · Full-time</div>
         <div class="exp-role fr">Développeur Frontend Senior · CDI</div>
-        <div class="exp-tools">Stack: Vue.js, React, Angular, TypeScript, Node.js</div>
+        <div class="exp-tools">Stack: Ruby on Rails, Vue.js, React, Angular, TypeScript, Node.js</div>
+        <ul class="exp-bullets">
+          <li class="en">Grew from junior to most senior engineer over 7+ years on the same core team</li>
+          <li class="fr">Passé de junior au plus senior de l'équipe en 7+ ans au sein de la même équipe</li>
+          <li class="en">Led the V2 UI overhaul of a physical router firmware product (Vue.js)</li>
+          <li class="fr">Refonte de l'interface V2 du firmware d'un routeur physique (Vue.js)</li>
+          <li class="en">Contributed to a browser-based password manager extension</li>
+          <li class="fr">Contribution au développement d'une extension navigateur de gestion de mots de passe</li>
+          <li class="en">Led multiple Rails-to-React migration cycles on ExpressVPN's customer-facing pages</li>
+          <li class="fr">Pilotage de plusieurs cycles de migration Rails → React sur les pages clients d'ExpressVPN</li>
+          <li class="en">Contributed to projects credited with driving or saving hundreds of thousands of dollars in revenue</li>
+          <li class="fr">Contribution à des projets ayant généré ou économisé plusieurs centaines de milliers de dollars</li>
+          <li class="en">Migrated translation management system from Phrase to Crowdin across the full product</li>
+          <li class="fr">Migration du système de gestion des traductions de Phrase vers Crowdin sur l'ensemble du produit</li>
+        </ul>
       </div>
     </div>
 
@@ -369,46 +412,32 @@
       <div class="exp-date">Sep 2016 – May 2017<br>Hong Kong</div>
       <div>
         <div class="exp-company">NLS</div>
-        <div class="exp-role en">Front-End Developer</div>
-        <div class="exp-role fr">Développeur Front-End</div>
-        <div class="exp-tools">Stack: Angular2, NodeJs, .NET Core MVC, Sass, JQuery</div>
+        <div class="exp-company-desc en">Staffing firm — placed at FLO Capital, a private equity investment platform startup</div>
+        <div class="exp-company-desc fr">Cabinet de recrutement — mission chez FLO Capital, startup de plateforme d'investissement en capital privé</div>
+        <div class="exp-role en">Frontend Developer</div>
+        <div class="exp-role fr">Développeur Frontend</div>
+        <div class="exp-tools">Stack: Angular 2, Node.js, .NET Core MVC, Sass, jQuery</div>
+        <ul class="exp-bullets">
+          <li class="en">Built the investor-facing frontend for a private equity crowdfunding platform — rapidly mastering TypeScript and Angular 2 from scratch</li>
+          <li class="fr">Développement du frontend investisseur d'une plateforme de crowdfunding en capital privé — montée en compétence rapide sur TypeScript et Angular 2</li>
+        </ul>
       </div>
     </div>
 
     <div class="exp-row">
-      <div class="exp-date">Feb 2016 – Jul 2016<br>Hong Kong</div>
+      <div class="exp-date">Feb – Jul 2016<br>Hong Kong</div>
       <div>
         <div class="exp-company">Intralogue</div>
-        <div class="exp-role en">Front-End Developer</div>
-        <div class="exp-role fr">Développeur Front-End</div>
-        <div class="exp-tools">Stack: React, NodeJs, ExpressJs, JQuery, Javascript</div>
+        <div class="exp-company-desc en">Early-stage startup — collaborative workspace tooling</div>
+        <div class="exp-company-desc fr">Startup early-stage — outils de travail collaboratif</div>
+        <div class="exp-role en">Frontend Developer</div>
+        <div class="exp-role fr">Développeur Frontend</div>
+        <div class="exp-tools">Stack: React, Node.js, Express.js, jQuery, JavaScript</div>
       </div>
-    </div>
-
-    <div class="intern-label">
-      <span class="en">INTERNSHIPS</span>
-      <span class="fr">STAGES</span>
-    </div>
-    <div class="intern-row">
-      <div class="intern-date">Jul–Dec 2014 · France</div>
-      <div><span class="intern-company">Haupria</span> <span class="intern-role">— <span class="en">Analyst Programmer</span><span class="fr">Analyste Programmeur</span></span></div>
-    </div>
-    <div class="intern-row">
-      <div class="intern-date">May–Aug 2012 · France</div>
-      <div><span class="intern-company">GenApi</span> <span class="intern-role">— <span class="en">Software Developer</span><span class="fr">Développeur Logiciel</span></span></div>
-    </div>
-    <div class="intern-row">
-      <div class="intern-date">Sep–Dec 2010 · Paris</div>
-      <div><span class="intern-company">INEO Engineering &amp; Systems</span> <span class="intern-role">— <span class="en">Intern</span><span class="fr">Stagiaire</span></span></div>
-    </div>
-    <div class="intern-row">
-      <div class="intern-date"><span class="en">Earlier</span><span class="fr">Antérieur</span> · France</div>
-      <div><span class="intern-company">GDF Suez</span> <span class="intern-role">— <span class="en">Intern</span><span class="fr">Stagiaire</span></span></div>
     </div>
 
   </div><!-- /page-body -->
 
-  <!-- WAVE BACKGROUND -->
   <div class="wave-bg">
     <svg viewBox="0 0 794 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,100 C130,20 260,160 397,90 C534,20 664,150 794,70 L794,260 L0,260 Z" fill="var(--wave1)" opacity="0.55"/>
@@ -429,12 +458,12 @@
 
     <div class="p2-name">CÉDRIC MARCELLIN</div>
 
+    <!-- TWO COLUMNS: Skills | Recommendations -->
     <div class="p2-grid">
-      <!-- LEFT: Skills & Education -->
       <div>
         <div class="section-title">
-          <span class="en">Skills &amp; Education</span>
-          <span class="fr">Compétences &amp; Formation</span>
+          <span class="en">Skills</span>
+          <span class="fr">Compétences</span>
         </div>
         <hr class="div">
 
@@ -451,31 +480,10 @@
         <div class="col-title fr">Qualités Personnelles</div>
         <div class="ps-item"><span class="en">Creativity</span><span class="fr">Créativité</span><div class="dots-row"><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-e"></div></div></div>
         <div class="ps-item"><span class="en">Autonomy</span><span class="fr">Autonomie</span><div class="dots-row"><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-e"></div></div></div>
-        <div class="ps-item"><span class="en">Learning-Sponge</span><span class="fr">Apprentissage rapide</span><div class="dots-row"><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div></div></div>
+        <div class="ps-item"><span class="en">Adaptability</span><span class="fr">Adaptabilité</span><div class="dots-row"><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div></div></div>
         <div class="ps-item"><span class="en">Communication</span><span class="fr">Communication</span><div class="dots-row"><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-f"></div><div class="dot-e"></div></div></div>
-
-        <div class="col-title en">Education</div>
-        <div class="col-title fr">Formation</div>
-        <div class="edu-item">
-          <div class="edu-row"><div class="edu-school">Epitech, France</div><div class="edu-year">2009–2014</div></div>
-          <div class="edu-degree en">Master of Information Technology</div>
-          <div class="edu-degree fr">Master en Informatique</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-row"><div class="edu-school">Beijing Jiaotong University</div><div class="edu-year">2012–2013</div></div>
-          <div class="edu-degree en">MIT Exchange Student</div>
-          <div class="edu-degree fr">Étudiant en échange — MIT</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-row"><div class="edu-school">School of Life, Earth</div><div class="edu-year">1991–<span class="en">Present</span><span class="fr">Présent</span></div></div>
-        </div>
-
-        <div class="col-title en">Personal Interests</div>
-        <div class="col-title fr">Centres d'intérêt</div>
-        <div class="interests">Digital Illustration, Animation, Video Games, Dance, Cats videos</div>
       </div>
 
-      <!-- RIGHT: Recommendations -->
       <div>
         <div class="section-title">
           <span class="en">Recommendations</span>
@@ -491,21 +499,66 @@
 
         <div class="rec-block">
           <div class="rec-author">Mark Ray-Smith</div>
-          <div class="rec-title-line">Global Head of Architecture, Securities Services · May 2017</div>
+          <div class="rec-title-line">Global Head of Architecture, Securities Services · FLO Capital (NLS) · May 2017</div>
           <div class="rec-text">"Cedric rose to every challenge — from mastering TypeScript &amp; Angular 2 in weeks to building a mobile site in ASP.NET Core Razor. Highly creative, technically strong, and a very valuable resource for any team."</div>
-        </div>
-
-        <div class="rec-block">
-          <div class="rec-author">N IL</div>
-          <div class="rec-title-line">Direct manager · Jul 2016</div>
-          <div class="rec-text">"A great contributor, team player, and agile learner. He helped build a web framework our team still benefits from. An experienced developer who can craft mock-ups quickly."</div>
         </div>
       </div>
     </div>
 
+    <!-- FULL WIDTH: Education -->
+    <div class="section-title">
+      <span class="en">Education</span>
+      <span class="fr">Formation</span>
+    </div>
+    <hr class="div">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;">
+      <div class="edu-item">
+        <div class="edu-row"><div class="edu-school">Epitech, France</div><div class="edu-year">2009–2014</div></div>
+        <div class="edu-degree en">Master of Information Technology</div>
+        <div class="edu-degree fr">Master en Informatique</div>
+        <div style="padding-left:14px;">
+          <div class="intern-label" style="margin-top:8px;margin-bottom:4px;"><span class="en">Internships (part of cursus)</span><span class="fr">Stages (intégrés au cursus)</span></div>
+          <div class="intern-row" style="display:flex;gap:10px;margin-bottom:3px;">
+            <div class="intern-date">Jul–Dec 2014</div>
+            <div><span class="intern-company">Haupria</span> <span class="intern-role">— <span class="en">Analyst Programmer</span><span class="fr">Analyste Programmeur</span></span></div>
+          </div>
+          <div class="intern-row" style="display:flex;gap:10px;margin-bottom:3px;">
+            <div class="intern-date">May–Aug 2012</div>
+            <div><span class="intern-company">GenApi</span> <span class="intern-role">— <span class="en">Software Developer</span><span class="fr">Développeur Logiciel</span></span></div>
+          </div>
+          <div class="intern-row" style="display:flex;gap:10px;margin-bottom:3px;">
+            <div class="intern-date">Sep–Dec 2010</div>
+            <div><span class="intern-company">INEO Engineering &amp; Systems</span> <span class="intern-role">— <span class="en">Intern</span><span class="fr">Stagiaire</span></span></div>
+          </div>
+          <div class="intern-row" style="display:flex;gap:10px;">
+            <div class="intern-date"><span class="en">Earlier</span><span class="fr">Antérieur</span></div>
+            <div><span class="intern-company">GDF Suez</span> <span class="intern-role">— <span class="en">Intern</span><span class="fr">Stagiaire</span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-row"><div class="edu-school">Beijing Jiaotong University</div><div class="edu-year">2012–2013</div></div>
+        <div class="edu-degree en">Exchange Student — Master of Information Technology program</div>
+        <div class="edu-degree fr">Étudiant en échange — Master en Informatique</div>
+      </div>
+    </div>
+
+    <!-- FULL WIDTH: Personal Interests -->
+    <div class="col-title en" style="margin-top:14px;">Personal Interests</div>
+    <div class="col-title fr" style="margin-top:14px;">Centres d'intérêt</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;">
+      <div class="interests en"><a href="https://tuskat.itch.io" target="_blank">Indie Game Dev</a></div>
+      <div class="interests fr"><a href="https://tuskat.itch.io" target="_blank">Développement de jeux indépendants</a></div>
+      <div class="interests en"><a href="https://cara.app/tuskat" target="_blank">Digital Illustration</a></div>
+      <div class="interests fr"><a href="https://cara.app/tuskat" target="_blank">Illustration Numérique</a></div>
+      <div class="interests en"><a href="https://ottlerstudio.com" target="_blank">Mobile App Dev / Consulting</a></div>
+      <div class="interests fr"><a href="https://ottlerstudio.com" target="_blank">Développement Mobile / Consulting</a></div>
+      <div class="interests en">Animation, Dance, Welsh Corgi Pembroke videos</div>
+      <div class="interests fr">Animation, Danse, Vidéos de Welsh Corgi Pembroke</div>
+    </div>
+
   </div><!-- /page-body -->
 
-  <!-- WAVE BACKGROUND -->
   <div class="wave-bg">
     <svg viewBox="0 0 794 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,100 C130,20 260,160 397,90 C534,20 664,150 794,70 L794,260 L0,260 Z" fill="var(--wave1)" opacity="0.55"/>
