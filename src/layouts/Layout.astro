@@ -1,23 +1,99 @@
-<!doctype html>
+---
+interface Props {
+  title?: string;
+}
+const { title = 'Cédric Marcellin — Senior Frontend Developer' } = Astro.props;
+---
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content="Senior Frontend Developer with 10+ years building web products that last. Vue, React, Rails, TypeScript." />
+  <meta property="og:title" content="Cédric Marcellin — Senior Frontend Developer" />
+  <meta property="og:description" content="10+ years building web products that last. Available for the right opportunity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cedricmarcellin.dev" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <slot />
+</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    --teal: #3bbfa0;
+    --teal-dim: rgba(59,191,160,0.12);
+    --bg: #2a2a28;
+    --bg2: #323230;
+    --bg3: #3a3a38;
+    --text: #e8e6e0;
+    --text2: #a0a098;
+    --text3: #6e6e68;
+    --border: rgba(255,255,255,0.08);
+    --wave1: #3a3a38;
+    --wave2: #2c2c2a;
+    --nav-h: 60px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { opacity: 0.8; }
+
+  .section-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 32px;
+    background: var(--teal);
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  hr.div {
+    border: none;
+    border-top: 1.5px solid var(--teal);
+    margin-bottom: 40px;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
 </style>

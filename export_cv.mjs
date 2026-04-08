@@ -3,7 +3,7 @@ import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const htmlPath = resolve(__dirname, 'cedric_marcellin_cv.html');
+const htmlPath = resolve(__dirname, 'resume/index.html');
 
 const mode = process.argv[2] === 'dark' ? 'dark' : 'light';
 const outPath = resolve(__dirname, `cedric_marcellin_cv_${mode}.pdf`);

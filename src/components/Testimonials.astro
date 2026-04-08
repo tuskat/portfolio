@@ -1,0 +1,69 @@
+---
+const recs = [
+  {
+    author: 'George Safta',
+    title: 'Software Engineering Manager · ExpressVPN · Feb 2026',
+    text: '"Cedric is a fantastic Senior Frontend Developer and a great teammate — technical, highly experienced, and brings a warm, collaborative spirit. Highly recommended."',
+  },
+  {
+    author: 'Mark Ray-Smith',
+    title: 'Global Head of Architecture, Securities Services · FLO Capital (NLS) · May 2017',
+    text: '"Cedric rose to every challenge — from mastering TypeScript & Angular 2 in weeks to building a mobile site in ASP.NET Core Razor. Highly creative, technically strong, and a very valuable resource for any team."',
+  },
+];
+---
+
+<section id="testimonials">
+  <div class="section-wrap">
+    <div class="section-title reveal">Testimonials</div>
+    <hr class="div" />
+    <div class="recs">
+      {recs.map(r => (
+        <div class="rec reveal">
+          <p class="rec-text">{r.text}</p>
+          <div class="rec-author">{r.author}</div>
+          <div class="rec-title">{r.title}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 100px 0;
+    background: var(--bg2);
+  }
+  .recs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .rec {
+    border-left: 3px solid var(--teal);
+    background: rgba(255,255,255,0.03);
+    border-radius: 0 6px 6px 0;
+    padding: 24px 24px 20px;
+  }
+  .rec-text {
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.75;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .rec-author {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .rec-title {
+    font-size: 12px;
+    color: var(--text3);
+    margin-top: 3px;
+  }
+
+  @media (max-width: 640px) {
+    .recs { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+---
+
+<section id="about">
+  <div class="section-wrap">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-title">About</div>
+        <hr class="div" />
+        <p>I've spent the better part of a decade building web products for one of the world's largest VPN providers — starting as a junior and ending as the person the team called when something was on fire. Along the way: framework migrations, firmware UIs, browser extensions, and more conversion funnels than I'd care to count.</p>
+        <p>Outside client work, I build games under <a href="https://tuskat.itch.io" target="_blank">tuskat</a> — three shipped titles across Phaser and Unity — and utility apps with <a href="https://ottlerstudio.com" target="_blank">OttlerStudio</a>, because apparently I find "good UI for boring tools" genuinely interesting. I also do digital illustration, mostly for fun and occasionally for things people can look at.</p>
+        <p>The best work I've done has been in teams where the <em>why</em> mattered as much as the <em>when</em> — where craft was valued, not just velocity. I'm not looking for the next moonshot. I'm looking for a place where good work is its own reward, and where the people around me feel the same.</p>
+      </div>
+      <div class="about-photo reveal">
+        <img src="/assets/photo.svg" alt="Cédric Marcellin" width="400" height="400" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 100px 0;
+    background: var(--bg);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 60px;
+    align-items: start;
+  }
+  .about-text p {
+    font-size: 16px;
+    color: var(--text2);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-text em { color: var(--text); font-style: italic; }
+  .about-text a { color: var(--teal); }
+
+  .about-photo {
+    position: sticky;
+    top: calc(var(--nav-h) + 32px);
+  }
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    display: block;
+  }
+
+  @media (max-width: 700px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-photo {
+      position: static;
+      max-width: 200px;
+    }
+  }
+</style>
