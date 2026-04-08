@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "badge": "Open to opportunities",
+    "subtitle": "Senior Frontend Developer",
+    "tagline": "10+ years building web products meant to last.<br/>Rails, React, Vue — whatever the job needs.",
+    "ctaWork": "View my work",
+    "ctaCV": "Download CV"
+  },
+  "work": {
+    "title": "Experience",
+    "present": "Present",
+    "jobs": [
+      {
+        "company": "Self-employed",
+        "client": "ExpressVPN",
+        "role": "Senior Frontend Developer",
+        "desc": "",
+        "bullets": [
+          "Maintained and stabilised the Rails codebase as the team's primary Rails resource",
+          "Resolved breaking issues and content-critical fixes across live customer-facing pages",
+          "Contributed to the migration toward a Next.js architecture"
+        ]
+      },
+      {
+        "company": "Network Guard",
+        "client": "",
+        "role": "Senior Frontend Developer · Full-time",
+        "desc": "contractor to ExpressVPN",
+        "bullets": [
+          "Led the V2 UI overhaul of a physical router firmware product (Vue.js)",
+          "Led multiple Rails-to-React migration cycles on ExpressVPN's customer-facing pages",
+          "Contributed to a browser-based password manager extension",
+          "Contributed to projects credited with driving or saving hundreds of thousands of dollars in revenue",
+          "Migrated translation management system from Phrase to Crowdin across the full product"
+        ]
+      },
+      {
+        "company": "NLS",
+        "client": "",
+        "role": "Frontend Developer",
+        "desc": "placed at FLO Capital",
+        "bullets": [
+          "Built the investor-facing frontend for a private equity crowdfunding platform"
+        ]
+      },
+      {
+        "company": "Intralogue",
+        "client": "",
+        "role": "Frontend Developer",
+        "desc": "collaborative workspace startup",
+        "bullets": []
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "p1": "I've spent the better part of a decade building web products for one of the world's largest VPN providers — starting as a junior and ending as the person the team called when something was on fire. Along the way: framework migrations, firmware UIs, browser extensions, and more conversion funnels than I'd care to count.",
+    "p2": "Outside client work, I build games under <a href=\"https://tuskat.itch.io\" target=\"_blank\">tuskat</a> — three shipped titles across Phaser and Unity — and utility apps with <a href=\"https://ottlerstudio.com\" target=\"_blank\">OttlerStudio</a>, because apparently I find \"good UI for boring tools\" genuinely interesting. I also do digital illustration, mostly for fun and occasionally for things people can look at.",
+    "p3": "The best work I've done has been in teams where the <em>why</em> mattered as much as the <em>when</em> — where craft was valued, not just velocity. I'm not looking for the next moonshot. I'm looking for a place where good work is its own reward, and where the people around me feel the same."
+  },
+  "skills": {
+    "title": "Skills",
+    "groups": [
+      { "label": "Frontend",        "skills": ["JavaScript", "TypeScript", "Vue.js", "React", "Angular", "Astro", "Sass / CSS"] },
+      { "label": "Backend",         "skills": ["Ruby on Rails", "Node.js", "Express.js", ".NET Core"] },
+      { "label": "Mobile & Other",  "skills": ["Flutter", "Unity / C#", "Phaser (2 & 3)"] },
+      { "label": "Tools",           "skills": ["Git", "REST APIs", "Crowdin", "Puppeteer", "Figma"] }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "gamesLabel": "Games —",
+    "studioLabel": "Studio —",
+    "tags": {
+      "professional": "Professional",
+      "nda": "NDA",
+      "wip": "WIP",
+      "game": "Game",
+      "mobile": "Mobile"
+    },
+    "linkGithub": "GitHub ↗",
+    "linkItch": "itch.io ↗",
+    "expressvpn": {
+      "title": "ExpressVPN Web Estate",
+      "desc": "10+ years of continuous work on one of the world's largest VPN providers. Customer landing pages, internal CMS, framework migrations from Rails through multiple generations of React, router firmware UI, and a browser-based password manager extension. Projects credited with driving hundreds of thousands in revenue impact."
+    },
+    "rodent": {
+      "title": "R0D3nt",
+      "desc": "A platformer where the odds are deliberately unfair — too many enemies to fight head-on. Survive by leading them into traps and off ledges instead."
+    },
+    "teddysCrew": {
+      "title": "Teddy's Crew",
+      "desc": "Top-down arcade shooter with endless mob waves and deliberately simple controls. Built on Phaser 3 with a Vue.js interface layer."
+    },
+    "roadToDakar": {
+      "title": "Road to Dakar",
+      "desc": "An endless racer inspired by Outrun, but with proper 3D terrain and real car physics — not a side-scroller sliding on a single axis."
+    },
+    "ottlerstudio": {
+      "title": "OttlerStudio",
+      "desc": "A collection of single-purpose utility apps built with a friend — Password Generator, Cooking Timer, Flashlight, and more. The premise: do one thing, do it with better UX than what's already on the market. Currently in development; store release pending."
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "No forms. Just pick your preferred channel.",
+    "labels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "illustration": "Illustration",
+      "games": "Games",
+      "studio": "Studio"
+    },
+    "meta": "This portfolio and CV were built in plain HTML/CSS and Astro — no templates. The CV exports to pixel-perfect PDF via a Puppeteer pipeline. Iterated with Claude Code."
+  }
+}

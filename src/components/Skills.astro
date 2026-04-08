@@ -1,32 +1,21 @@
 ---
-const groups = [
-  {
-    label: 'Frontend',
-    skills: ['JavaScript', 'TypeScript', 'Vue.js', 'React', 'Angular', 'Astro', 'Sass / CSS'],
-  },
-  {
-    label: 'Backend',
-    skills: ['Ruby on Rails', 'Node.js', 'Express.js', '.NET Core'],
-  },
-  {
-    label: 'Mobile & Other',
-    skills: ['Flutter', 'Unity / C#', 'Phaser (2 & 3)'],
-  },
-  {
-    label: 'Tools',
-    skills: ['Git', 'REST APIs', 'Crowdin', 'Puppeteer', 'Figma'],
-  },
-];
+import { en, fr } from '../i18n';
 ---
 
 <section id="skills">
   <div class="section-wrap">
-    <div class="section-title reveal">Skills</div>
+    <div class="section-title reveal">
+      <span class="lang-en">{en.skills.title}</span>
+      <span class="lang-fr">{fr.skills.title}</span>
+    </div>
     <hr class="div" />
     <div class="groups">
-      {groups.map(g => (
+      {en.skills.groups.map((g, i) => (
         <div class="group reveal">
-          <div class="group-label">{g.label}</div>
+          <div class="group-label">
+            <span class="lang-en">{g.label}</span>
+            <span class="lang-fr">{fr.skills.groups[i].label}</span>
+          </div>
           <div class="chips">
             {g.skills.map(s => <span class="chip">{s}</span>)}
           </div>
@@ -34,18 +23,30 @@ const groups = [
       ))}
     </div>
   </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="var(--bg)"/>
+    </svg>
+  </div>
 </section>
 
 <style>
   section {
-    padding: 80px 0;
+    padding: 80px 0 0;
     background: var(--bg2);
+    position: relative;
   }
-  .groups {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  .section-wrap { padding-bottom: 120px; }
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
   }
+  .wave svg { width: 100%; height: 100%; }
+  .groups { display: flex; flex-direction: column; gap: 24px; }
   .group {
     display: grid;
     grid-template-columns: 140px 1fr;
@@ -59,11 +60,7 @@ const groups = [
     letter-spacing: 0.5px;
     padding-top: 6px;
   }
-  .chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip {
     font-size: 14px;
     color: var(--text);

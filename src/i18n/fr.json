@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "work": "Expérience",
+    "about": "À propos",
+    "projects": "Projets",
+    "testimonials": "Recommandations",
+    "contact": "Contact",
+    "downloadCV": "Télécharger le CV"
+  },
+  "hero": {
+    "badge": "Disponible",
+    "subtitle": "Développeur Frontend Senior",
+    "tagline": "10+ ans à construire des produits web faits pour durer.<br/>Rails, React, Vue — ce que le projet demande.",
+    "ctaWork": "Voir mes projets",
+    "ctaCV": "Télécharger le CV"
+  },
+  "work": {
+    "title": "Expérience",
+    "present": "Présent",
+    "jobs": [
+      {
+        "company": "Indépendant",
+        "client": "ExpressVPN",
+        "role": "Développeur Frontend Senior",
+        "desc": "",
+        "bullets": [
+          "Maintenance et stabilisation de la base Rails en tant que référent principal de l'équipe",
+          "Résolution de bugs critiques et correctifs de contenu sur les pages clients en production",
+          "Contribution à la migration vers une architecture Next.js"
+        ]
+      },
+      {
+        "company": "Network Guard",
+        "client": "",
+        "role": "Développeur Frontend Senior · CDI",
+        "desc": "prestataire d'ExpressVPN",
+        "bullets": [
+          "Refonte de l'interface V2 du firmware d'un routeur physique (Vue.js)",
+          "Pilotage de plusieurs cycles de migration Rails → React sur les pages clients d'ExpressVPN",
+          "Contribution au développement d'une extension navigateur de gestion de mots de passe",
+          "Contribution à des projets ayant généré ou économisé plusieurs centaines de milliers de dollars",
+          "Migration du système de gestion des traductions de Phrase vers Crowdin sur l'ensemble du produit"
+        ]
+      },
+      {
+        "company": "NLS",
+        "client": "",
+        "role": "Développeur Frontend",
+        "desc": "mission chez FLO Capital",
+        "bullets": [
+          "Développement du frontend investisseur d'une plateforme de crowdfunding en capital privé"
+        ]
+      },
+      {
+        "company": "Intralogue",
+        "client": "",
+        "role": "Développeur Frontend",
+        "desc": "startup d'outils collaboratifs",
+        "bullets": []
+      }
+    ]
+  },
+  "about": {
+    "title": "À propos",
+    "p1": "J'ai passé une bonne partie de la dernière décennie à construire des produits web pour l'un des plus grands fournisseurs VPN au monde — en débutant comme junior et en finissant comme la personne que l'équipe appelait quand quelque chose brûlait. En chemin : migrations de frameworks, interfaces firmware, extensions navigateur, et plus de tunnels de conversion que je ne voudrais en compter.",
+    "p2": "En dehors du travail client, je développe des jeux sous <a href=\"https://tuskat.itch.io\" target=\"_blank\">tuskat</a> — trois titres publiés sur Phaser et Unity — et des applications utilitaires avec <a href=\"https://ottlerstudio.com\" target=\"_blank\">OttlerStudio</a>, parce que apparemment \"une bonne UI pour des outils ennuyeux\" m'intéresse vraiment. Je fais aussi de l'illustration numérique, surtout pour le plaisir.",
+    "p3": "Les meilleures choses que j'ai faites l'ont été dans des équipes où le <em>pourquoi</em> comptait autant que le <em>quand</em> — où la qualité du travail était valorisée, pas seulement la vitesse de livraison. Je ne cherche pas la prochaine licorne. Je cherche un endroit où bien faire les choses est une fin en soi, et où les gens autour de moi partagent ce point de vue."
+  },
+  "skills": {
+    "title": "Compétences",
+    "groups": [
+      { "label": "Frontend",        "skills": ["JavaScript", "TypeScript", "Vue.js", "React", "Angular", "Astro", "Sass / CSS"] },
+      { "label": "Backend",         "skills": ["Ruby on Rails", "Node.js", "Express.js", ".NET Core"] },
+      { "label": "Mobile & Autre",  "skills": ["Flutter", "Unity / C#", "Phaser (2 & 3)"] },
+      { "label": "Outils",          "skills": ["Git", "REST APIs", "Crowdin", "Puppeteer", "Figma"] }
+    ]
+  },
+  "projects": {
+    "title": "Projets",
+    "gamesLabel": "Jeux —",
+    "studioLabel": "Studio —",
+    "tags": {
+      "professional": "Professionnel",
+      "nda": "NDA",
+      "wip": "En cours",
+      "game": "Jeu",
+      "mobile": "Mobile"
+    },
+    "linkGithub": "GitHub ↗",
+    "linkItch": "itch.io ↗",
+    "expressvpn": {
+      "title": "ExpressVPN Web Estate",
+      "desc": "Plus de 10 ans de travail continu pour l'un des plus grands fournisseurs VPN au monde. Pages d'atterrissage, CMS interne, migrations de Rails à plusieurs générations de React, interface firmware de routeur et extension de gestionnaire de mots de passe. Des projets crédités pour des centaines de milliers de dollars d'impact sur les revenus."
+    },
+    "rodent": {
+      "title": "R0D3nt",
+      "desc": "Un platformer où les chances sont délibérément inégales — trop d'ennemis pour les affronter directement. Survivez en les attirant dans des pièges et vers des précipices."
+    },
+    "teddysCrew": {
+      "title": "Teddy's Crew",
+      "desc": "Shoot'em up en vue du dessus avec des vagues infinies d'ennemis et des contrôles volontairement simples. Développé avec Phaser 3 et une interface Vue.js."
+    },
+    "roadToDakar": {
+      "title": "Road to Dakar",
+      "desc": "Un jeu de course infini inspiré d'Outrun, mais avec un vrai terrain 3D et une physique automobile réelle — pas un défilement latéral sur un axe unique."
+    },
+    "ottlerstudio": {
+      "title": "OttlerStudio",
+      "desc": "Une collection d'applications utilitaires à usage unique développées avec un ami — Générateur de mots de passe, Minuteur de cuisine, Lampe de poche, et plus. Le principe : faire une seule chose, avec une meilleure UX que ce qui existe déjà. En développement ; sortie en boutique à venir."
+    }
+  },
+  "testimonials": {
+    "title": "Recommandations"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Pas de formulaire. Choisissez simplement votre canal préféré.",
+    "labels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "illustration": "Illustration",
+      "games": "Jeux",
+      "studio": "Studio"
+    },
+    "meta": "Ce portfolio et ce CV ont été construits en HTML/CSS et Astro — sans template. Le CV s'exporte en PDF pixel-perfect via un pipeline Puppeteer. Développé en itérant avec Claude Code."
+  }
+}

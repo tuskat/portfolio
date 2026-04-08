@@ -1,4 +1,6 @@
 ---
+import { en, fr } from '../i18n';
+
 const recs = [
   {
     author: 'George Safta',
@@ -15,7 +17,10 @@ const recs = [
 
 <section id="testimonials">
   <div class="section-wrap">
-    <div class="section-title reveal">Testimonials</div>
+    <div class="section-title reveal">
+      <span class="lang-en">{en.testimonials.title}</span>
+      <span class="lang-fr">{fr.testimonials.title}</span>
+    </div>
     <hr class="div" />
     <div class="recs">
       {recs.map(r => (
@@ -27,43 +32,35 @@ const recs = [
       ))}
     </div>
   </div>
+  <!-- <div class="wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="var(--bg)"/>
+    </svg>
+  </div> -->
 </section>
 
 <style>
-  section {
-    padding: 100px 0;
-    background: var(--bg2);
+  section { padding: 100px 0 0; background: var(--bg2); position: relative; }
+  .section-wrap { padding-bottom: 120px; }
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
   }
-  .recs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
+  .wave svg { width: 100%; height: 100%; }
+  .recs { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   .rec {
     border-left: 3px solid var(--teal);
     background: rgba(255,255,255,0.03);
     border-radius: 0 6px 6px 0;
     padding: 24px 24px 20px;
   }
-  .rec-text {
-    font-size: 15px;
-    color: var(--text2);
-    line-height: 1.75;
-    font-style: italic;
-    margin-bottom: 16px;
-  }
-  .rec-author {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text);
-  }
-  .rec-title {
-    font-size: 12px;
-    color: var(--text3);
-    margin-top: 3px;
-  }
+  .rec-text { font-size: 15px; color: var(--text2); line-height: 1.75; font-style: italic; margin-bottom: 16px; }
+  .rec-author { font-size: 15px; font-weight: 500; color: var(--text); }
+  .rec-title { font-size: 12px; color: var(--text3); margin-top: 3px; }
 
-  @media (max-width: 640px) {
-    .recs { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 640px) { .recs { grid-template-columns: 1fr; } }
 </style>

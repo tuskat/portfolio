@@ -1,0 +1,15 @@
+---
+// Inline translation helper.
+// Renders both lang variants; CSS hides the inactive one.
+// Use set:html for strings containing HTML tags (<em>, <a>, <br/> etc.)
+interface Props {
+  en: string;
+  fr: string;
+  html?: boolean;  // set true if the string contains HTML
+}
+const { en, fr, html = false } = Astro.props;
+---
+{html
+  ? <><span class="lang-en" set:html={en} /><span class="lang-fr" set:html={fr} /></>
+  : <><span class="lang-en">{en}</span><span class="lang-fr">{fr}</span></>
+}

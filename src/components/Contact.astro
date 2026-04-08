@@ -1,54 +1,69 @@
 ---
+import { en, fr } from '../i18n';
+
 const links = [
-  { label: 'Email', value: 'cedric.marcellin@gmail.com', href: 'mailto:cedric.marcellin@gmail.com' },
-  { label: 'LinkedIn', value: 'cedric-marcellin', href: 'https://www.linkedin.com/in/cedric-marcellin-70317889/' },
-  { label: 'GitHub', value: 'github.com/tuskat', href: 'https://github.com/tuskat' },
-  { label: 'Illustration', value: 'cara.app/tuskat', href: 'https://cara.app/tuskat' },
-  { label: 'Games', value: 'tuskat.itch.io', href: 'https://tuskat.itch.io' },
-  { label: 'Studio', value: 'ottlerstudio.com', href: 'https://ottlerstudio.com' },
-];
+  { labelKey: 'email',        value: 'cedric.marcellin@gmail.com',                          href: 'mailto:cedric.marcellin@gmail.com' },
+  { labelKey: 'linkedin',     value: 'cedric-marcellin',                                    href: 'https://www.linkedin.com/in/cedric-marcellin-70317889/' },
+  { labelKey: 'github',       value: 'github.com/tuskat',                                   href: 'https://github.com/tuskat' },
+  { labelKey: 'illustration', value: 'cara.app/tuskat',                                     href: 'https://cara.app/tuskat' },
+  { labelKey: 'games',        value: 'tuskat.itch.io',                                      href: 'https://tuskat.itch.io' },
+  { labelKey: 'studio',       value: 'ottlerstudio.com',                                    href: 'https://ottlerstudio.com' },
+] as const;
 ---
 
 <section id="contact">
   <div class="section-wrap">
-    <div class="section-title reveal">Contact</div>
+    <div class="section-title reveal">
+      <span class="lang-en">{en.contact.title}</span>
+      <span class="lang-fr">{fr.contact.title}</span>
+    </div>
     <hr class="div" />
-    <p class="intro reveal">No forms. Just pick your preferred channel.</p>
+    <p class="intro reveal">
+      <span class="lang-en">{en.contact.intro}</span>
+      <span class="lang-fr">{fr.contact.intro}</span>
+    </p>
     <div class="links reveal">
       {links.map(l => (
         <a class="link-row" href={l.href} target={l.href.startsWith('mailto') ? undefined : '_blank'}>
-          <span class="link-label">{l.label}</span>
+          <span class="link-label">
+            <span class="lang-en">{en.contact.labels[l.labelKey]}</span>
+            <span class="lang-fr">{fr.contact.labels[l.labelKey]}</span>
+          </span>
           <span class="link-value">{l.value}</span>
           <span class="link-arrow">↗</span>
         </a>
       ))}
     </div>
+
+    <p class="meta reveal">
+      <span class="lang-en">{en.contact.meta}</span>
+      <span class="lang-fr">{fr.contact.meta}</span>
+      {' '}<a href="https://github.com/tuskat" target="_blank">Source ↗</a>
+    </p>
   </div>
 
-  <p class="meta reveal">
-    This portfolio and CV were built in plain HTML/CSS and Astro — no templates. The CV exports to pixel-perfect PDF via a Puppeteer pipeline. Iterated with Claude Code. <a href="https://github.com/tuskat" target="_blank">Source ↗</a>
-  </p>
-
+  <div class="waves">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,200 L0,165 C150,75 380,185 580,110 C780,40 1000,180 1180,115 C1330,65 1420,148 1440,140 L1440,200 Z" fill="#34554c" transform="scale(-1,1) translate(-1440,0)"/>
+      <!-- <path d="M0,200 L0,183 C150,138 380,193 580,155 C780,120 1000,190 1180,158 C1330,133 1420,174 1440,170 L1440,200 Z" fill="#377968"/> -->
+    </svg>
+  </div>
   <div class="bottom-bar"></div>
 </section>
 
 <style>
-  section {
-    padding: 100px 0 0;
-    background: var(--bg);
-    position: relative;
+  section { padding: 100px 0 0; background: var(--bg2); position: relative; }
+  .waves {
+    height: 200px;
+    pointer-events: none;
+    overflow: hidden;
   }
-  .intro {
-    font-size: 16px;
-    color: var(--text3);
-    margin-bottom: 32px;
-  }
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 80px;
-  }
+  .waves svg { width: 100%; height: 100%; }
+
+  .section-wrap { padding-bottom: 60px; }
+  .intro { font-size: 16px; color: var(--text3); margin-bottom: 32px; }
+
+  .links { display: flex; flex-direction: column; margin-bottom: 60px; }
   .link-row {
     display: flex;
     align-items: center;
@@ -57,11 +72,11 @@ const links = [
     border-bottom: 0.5px solid var(--border);
     color: var(--text);
     text-decoration: none;
-    transition: background 0.15s;
   }
   .link-row:hover { opacity: 1; }
   .link-row:hover .link-label { color: var(--teal); }
   .link-row:hover .link-arrow { opacity: 1; }
+
   .link-label {
     font-size: 13px;
     font-weight: 500;
@@ -71,31 +86,17 @@ const links = [
     flex-shrink: 0;
     transition: color 0.15s;
   }
-  .link-value {
-    font-size: 16px;
-    color: var(--text);
-    flex: 1;
-  }
-  .link-arrow {
-    font-size: 16px;
-    color: var(--teal);
-    opacity: 0;
-    transition: opacity 0.15s;
-  }
+  .link-value { font-size: 16px; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 16px; color: var(--teal); opacity: 0; transition: opacity 0.15s; }
 
   .meta {
-    max-width: 900px;
-    margin: 0 auto 48px;
-    padding: 0 32px;
     font-size: 13px;
     color: var(--text3);
     line-height: 1.6;
+    margin-bottom: 48px;
   }
   .meta a { color: var(--text3); text-decoration: underline; text-underline-offset: 3px; }
   .meta a:hover { color: var(--teal); opacity: 1; }
 
-  .bottom-bar {
-    background: var(--teal);
-    height: 14px;
-  }
+  .bottom-bar { background: var(--teal); height: 14px; }
 </style>

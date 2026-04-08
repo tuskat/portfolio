@@ -1,32 +1,40 @@
 ---
+import { en, fr } from '../i18n';
 ---
 
 <section id="hero">
   <div class="hero-inner">
     <div class="badge">
       <span class="badge-dot"></span>
-      Open to opportunities
+      <span class="lang-en">{en.hero.badge}</span>
+      <span class="lang-fr">{fr.hero.badge}</span>
     </div>
     <h1>CÉDRIC<br/>MARCELLIN</h1>
     <p class="subtitle">
       <span class="dot"></span>
-      Senior Frontend Developer
+      <span class="lang-en">{en.hero.subtitle}</span>
+      <span class="lang-fr">{fr.hero.subtitle}</span>
       <span class="dot"></span>
     </p>
     <p class="tagline">
-      10+ years building web products meant to last.<br/>
-      Rails, React, Vue — whatever the job needs.
+      <span class="lang-en" set:html={en.hero.tagline} />
+      <span class="lang-fr" set:html={fr.hero.tagline} />
     </p>
     <div class="ctas">
-      <a class="cta-primary" href="#work">View my work</a>
-      <a class="cta-secondary" href="/assets/cedric_marcellin_cv_light.pdf" target="_blank">Download CV</a>
+      <a class="cta-primary" href="#work">
+        <span class="lang-en">{en.hero.ctaWork}</span>
+        <span class="lang-fr">{fr.hero.ctaWork}</span>
+      </a>
+      <a class="cta-secondary" href="/assets/cedric_marcellin_cv_light.pdf" target="_blank">
+        <span class="lang-en">{en.hero.ctaCV}</span>
+        <span class="lang-fr">{fr.hero.ctaCV}</span>
+      </a>
     </div>
   </div>
 
   <div class="wave">
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="var(--bg2)" opacity="0.6"/>
-      <path d="M0,80 C200,20 440,120 720,80 C1000,40 1240,120 1440,80 L1440,120 L0,120 Z" fill="var(--wave2)" opacity="0.7"/>
+      <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="var(--bg2)"/>
     </svg>
   </div>
 </section>
@@ -63,6 +71,7 @@
     border-radius: 50%;
     background: var(--teal);
     animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
   }
   @keyframes pulse {
     0%, 100% { opacity: 1; }

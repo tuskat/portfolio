@@ -1,20 +1,27 @@
 ---
-const links = [
-  { label: 'Work', href: '#work' },
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
-];
+import { en, fr } from '../i18n';
 ---
 
 <nav id="nav">
   <div class="nav-inner">
     <a class="nav-name" href="#">CM</a>
     <ul class="nav-links">
-      {links.map(l => <li><a href={l.href}>{l.label}</a></li>)}
+      <li><a href="#work"><span class="lang-en">{en.nav.work}</span><span class="lang-fr">{fr.nav.work}</span></a></li>
+       <li><a href="#projects"><span class="lang-en">{en.nav.projects}</span><span class="lang-fr">{fr.nav.projects}</span></a></li>
+      <li><a href="#testimonials"><span class="lang-en">{en.nav.testimonials}</span><span class="lang-fr">{fr.nav.testimonials}</span></a></li>
+      <li><a href="#about"><span class="lang-en">{en.nav.about}</span><span class="lang-fr">{fr.nav.about}</span></a></li>
+      <li><a href="#contact"><span class="lang-en">{en.nav.contact}</span><span class="lang-fr">{fr.nav.contact}</span></a></li>
     </ul>
-    <a class="nav-cv" href="/assets/cedric_marcellin_cv_light.pdf" target="_blank">Download CV</a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button id="btn-fr" class="lang-btn" onclick="setLang('fr')">FR</button>
+      </div>
+      <a class="nav-cv" href="/assets/cedric_marcellin_cv_light.pdf" target="_blank">
+        <span class="lang-en">{en.nav.downloadCV}</span>
+        <span class="lang-fr">{fr.nav.downloadCV}</span>
+      </a>
+    </div>
   </div>
 </nav>
 
@@ -23,6 +30,22 @@ const links = [
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
+
+  function setLang(lang: string) {
+    document.body.classList.remove('lang-en', 'lang-fr');
+    document.body.classList.add('lang-' + lang);
+    document.getElementById('btn-en')!.classList.toggle('active', lang === 'en');
+    document.getElementById('btn-fr')!.classList.toggle('active', lang === 'fr');
+    document.documentElement.lang = lang;
+    sessionStorage.setItem('lang', lang);
+  }
+
+  // Expose globally for inline onclick
+  (window as any).setLang = setLang;
+
+  // Restore saved preference
+  const saved = sessionStorage.getItem('lang');
+  if (saved === 'fr') setLang('fr');
 </script>
 
 <style>
@@ -72,6 +95,34 @@ const links = [
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--text); opacity: 1; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .lang-toggle {
+    display: flex;
+    gap: 2px;
+  }
+  .lang-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text3);
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .lang-btn:hover { color: var(--text2); }
+  .lang-btn.active {
+    color: var(--teal);
+    border-color: rgba(59,191,160,0.3);
+  }
+
   .nav-cv {
     font-size: 13px;
     padding: 6px 16px;
@@ -84,7 +135,7 @@ const links = [
   }
   .nav-cv:hover { background: var(--teal-dim); opacity: 1; }
 
-  @media (max-width: 640px) {
+  @media (max-width: 700px) {
     .nav-links { display: none; }
   }
 </style>

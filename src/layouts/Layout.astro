@@ -20,7 +20,7 @@ const { title = 'Cédric Marcellin — Senior Frontend Developer' } = Astro.prop
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="lang-en">
   <slot />
 </body>
 </html>
@@ -96,4 +96,8 @@ const { title = 'Cédric Marcellin — Senior Frontend Developer' } = Astro.prop
     opacity: 1;
     transform: none;
   }
+
+  /* ── LANG TOGGLE ── */
+  body.lang-fr .lang-en { display: none; }
+  body.lang-en .lang-fr { display: none; }
 </style>

@@ -1,28 +1,48 @@
 ---
+import { en, fr } from '../i18n';
 ---
 
 <section id="about">
   <div class="section-wrap">
     <div class="about-grid">
       <div class="about-text reveal">
-        <div class="section-title">About</div>
+        <div class="section-title">
+          <span class="lang-en">{en.about.title}</span>
+          <span class="lang-fr">{fr.about.title}</span>
+        </div>
         <hr class="div" />
-        <p>I've spent the better part of a decade building web products for one of the world's largest VPN providers — starting as a junior and ending as the person the team called when something was on fire. Along the way: framework migrations, firmware UIs, browser extensions, and more conversion funnels than I'd care to count.</p>
-        <p>Outside client work, I build games under <a href="https://tuskat.itch.io" target="_blank">tuskat</a> — three shipped titles across Phaser and Unity — and utility apps with <a href="https://ottlerstudio.com" target="_blank">OttlerStudio</a>, because apparently I find "good UI for boring tools" genuinely interesting. I also do digital illustration, mostly for fun and occasionally for things people can look at.</p>
-        <p>The best work I've done has been in teams where the <em>why</em> mattered as much as the <em>when</em> — where craft was valued, not just velocity. I'm not looking for the next moonshot. I'm looking for a place where good work is its own reward, and where the people around me feel the same.</p>
+        <p><span class="lang-en" set:html={en.about.p1} /><span class="lang-fr" set:html={fr.about.p1} /></p>
+        <p><span class="lang-en" set:html={en.about.p2} /><span class="lang-fr" set:html={fr.about.p2} /></p>
+        <p><span class="lang-en" set:html={en.about.p3} /><span class="lang-fr" set:html={fr.about.p3} /></p>
       </div>
       <div class="about-photo reveal">
         <img src="/assets/photo.svg" alt="Cédric Marcellin" width="400" height="400" />
       </div>
     </div>
   </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="var(--bg2)"/>
+    </svg>
+  </div>
 </section>
 
 <style>
   section {
-    padding: 100px 0;
+    padding: 100px 0 0;
     background: var(--bg);
+    position: relative;
   }
+  .section-wrap { padding-bottom: 120px; }
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+  }
+  .wave svg { width: 100%; height: 100%; }
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 260px;
@@ -36,8 +56,8 @@
     margin-bottom: 20px;
   }
   .about-text p:last-child { margin-bottom: 0; }
-  .about-text em { color: var(--text); font-style: italic; }
-  .about-text a { color: var(--teal); }
+  .about-text :global(em) { color: var(--text); font-style: italic; }
+  .about-text :global(a) { color: var(--teal); }
 
   .about-photo {
     position: sticky;
@@ -52,12 +72,7 @@
   }
 
   @media (max-width: 700px) {
-    .about-grid {
-      grid-template-columns: 1fr;
-    }
-    .about-photo {
-      position: static;
-      max-width: 200px;
-    }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-photo { position: static; max-width: 200px; }
   }
 </style>
