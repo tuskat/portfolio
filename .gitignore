@@ -1,5 +1,7 @@
 node_modules/
 package-lock.json
 .DS_store
-*.pdf
 cv_audit.md
+.claude
+.astro
+dist/
