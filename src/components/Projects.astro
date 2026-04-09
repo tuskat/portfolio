@@ -2,9 +2,9 @@
 import { en, fr } from '../i18n';
 
 const games = [
-  { key: 'rodent',      image: '/assets/projects/rodent.svg',       github: 'https://github.com/tuskat/r0d3nt',       itch: 'https://tuskat.itch.io' },
-  { key: 'teddysCrew', image: '/assets/projects/teddys-crew.svg',  github: 'https://github.com/tuskat/teddys-crew',  itch: 'https://tuskat.itch.io' },
-  { key: 'roadToDakar',image: '/assets/projects/road-to-dakar.svg',github: 'https://github.com/tuskat/road-to-dakar',itch: 'https://tuskat.itch.io' },
+  { key: 'rodent',      image: '/assets/projects/r0d3nt.png',       github: 'https://github.com/tuskat/r0d3nt',       itch: 'https://tuskat.itch.io/r0d3nt' },
+  { key: 'teddysCrew', image: '/assets/projects/teddys-crew.png',  github: 'https://github.com/tuskat/teddys-crew',  itch: 'https://tuskat.itch.io/teddys-crew' },
+  { key: 'roadToDakar',image: '/assets/projects/road-to-dakar.png',github: 'https://github.com/tuskat/RTD',itch: 'https://tuskat.itch.io/road-to-dakar' },
 ] as const;
 ---
 
@@ -17,8 +17,7 @@ const games = [
     <hr class="div" />
 
     <!-- Professional -->
-    <div class="featured reveal">
-      <img src="/assets/projects/expressvpn.svg" alt="ExpressVPN" class="featured-img" width="800" height="450" />
+    <div class="featured featured-noimg reveal">
       <div class="featured-body">
         <div class="card-tags">
           <span class="tag"><span class="lang-en">{en.projects.tags.professional}</span><span class="lang-fr">{fr.projects.tags.professional}</span></span>
@@ -80,7 +79,7 @@ const games = [
       {' '}<a href="https://ottlerstudio.com" target="_blank">ottlerstudio.com</a>
     </div>
     <div class="featured reveal">
-      <img src="/assets/projects/ottlerstudio.svg" alt="OttlerStudio" class="featured-img" width="800" height="450" />
+      <img src="/assets/projects/ottlerstudio.png" alt="OttlerStudio" class="featured-img" width="800" height="450" />
       <div class="featured-body">
         <div class="card-tags">
           <span class="tag"><span class="lang-en">{en.projects.tags.mobile}</span><span class="lang-fr">{fr.projects.tags.mobile}</span></span>
@@ -127,6 +126,9 @@ const games = [
   }
   .sub-title a { color: var(--teal); }
 
+  .featured-noimg { grid-template-columns: 1fr !important; }
+  .featured-noimg .featured-body { max-width: 640px; }
+
   .featured {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -136,7 +138,7 @@ const games = [
     overflow: hidden;
     background: var(--bg2);
   }
-  .featured-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .featured-img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .featured-body { padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; }
 
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }

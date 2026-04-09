@@ -10,7 +10,7 @@
   "hero": {
     "badge": "Open to opportunities",
     "subtitle": "Senior Frontend Developer",
-    "tagline": "10+ years building web products meant to last.<br/>Rails, React, Vue — whatever the job needs.",
+    "tagline": "10+ years building web products meant to last.<br/>Rails, React, Vue. Whatever the job needs.",
     "ctaWork": "View my work",
     "ctaCV": "Download CV"
   },
@@ -33,7 +33,7 @@
         "company": "Network Guard",
         "client": "",
         "role": "Senior Frontend Developer · Full-time",
-        "desc": "contractor to ExpressVPN",
+        "desc": "service provider for ExpressVPN",
         "bullets": [
           "Led the V2 UI overhaul of a physical router firmware product (Vue.js)",
           "Led multiple Rails-to-React migration cycles on ExpressVPN's customer-facing pages",
@@ -62,9 +62,9 @@
   },
   "about": {
     "title": "About",
-    "p1": "I've spent the better part of a decade building web products for one of the world's largest VPN providers — starting as a junior and ending as the person the team called when something was on fire. Along the way: framework migrations, firmware UIs, browser extensions, and more conversion funnels than I'd care to count.",
-    "p2": "Outside client work, I build games under <a href=\"https://tuskat.itch.io\" target=\"_blank\">tuskat</a> — three shipped titles across Phaser and Unity — and utility apps with <a href=\"https://ottlerstudio.com\" target=\"_blank\">OttlerStudio</a>, because apparently I find \"good UI for boring tools\" genuinely interesting. I also do digital illustration, mostly for fun and occasionally for things people can look at.",
-    "p3": "The best work I've done has been in teams where the <em>why</em> mattered as much as the <em>when</em> — where craft was valued, not just velocity. I'm not looking for the next moonshot. I'm looking for a place where good work is its own reward, and where the people around me feel the same."
+    "p1": "I've spent the better part of a decade building web products for one of the world's largest VPN providers, starting as a junior and ending as the person the team called when something was on fire. Along the way: framework migrations, firmware UIs, browser extensions, and more conversion funnels than I'd care to count.",
+    "p2": "Outside client work, I build games under <a href=\"https://tuskat.itch.io\" target=\"_blank\">tuskat</a> (three shipped titles across Phaser and Unity) and utility apps with <a href=\"https://ottlerstudio.com\" target=\"_blank\">OttlerStudio</a>, because apparently I find \"good UI for boring tools\" genuinely interesting. I also do digital illustration, mostly for fun and occasionally for things people can look at.",
+    "p3": "The best work I've done has been in teams where the <em>why</em> mattered as much as the <em>when</em>, where craft was valued, not just velocity. I'm not looking for the next moonshot. I'm looking for a place where good work is its own reward, and where the people around me feel the same."
   },
   "skills": {
     "title": "Skills",
@@ -77,8 +77,8 @@
   },
   "projects": {
     "title": "Projects",
-    "gamesLabel": "Games —",
-    "studioLabel": "Studio —",
+    "gamesLabel": "Games ·",
+    "studioLabel": "Studio ·",
     "tags": {
       "professional": "Professional",
       "nda": "NDA",
@@ -94,7 +94,7 @@
     },
     "rodent": {
       "title": "R0D3nt",
-      "desc": "A platformer where the odds are deliberately unfair — too many enemies to fight head-on. Survive by leading them into traps and off ledges instead."
+      "desc": "A platformer where the odds are deliberately unfair. Too many enemies to fight head-on. Survive by leading them into traps and off ledges instead."
     },
     "teddysCrew": {
       "title": "Teddy's Crew",
@@ -102,11 +102,11 @@
     },
     "roadToDakar": {
       "title": "Road to Dakar",
-      "desc": "An endless racer inspired by Outrun, but with proper 3D terrain and real car physics — not a side-scroller sliding on a single axis."
+      "desc": "An endless racer inspired by Outrun, but with proper 3D terrain and real car physics, not a side-scroller sliding on a single axis."
     },
     "ottlerstudio": {
       "title": "OttlerStudio",
-      "desc": "A collection of single-purpose utility apps built with a friend — Password Generator, Cooking Timer, Flashlight, and more. The premise: do one thing, do it with better UX than what's already on the market. Currently in development; store release pending."
+      "desc": "A collection of single-purpose utility apps built with a friend: Password Generator, Cooking Timer, Flashlight, and more. The premise: do one thing, do it with better UX than what's already on the market. Currently in development; store release pending."
     }
   },
   "testimonials": {
@@ -123,6 +123,6 @@
       "games": "Games",
       "studio": "Studio"
     },
-    "meta": "This portfolio and CV were built in plain HTML/CSS and Astro — no templates. The CV exports to pixel-perfect PDF via a Puppeteer pipeline. Iterated with Claude Code."
+    "meta": "This portfolio and CV were built in plain HTML/CSS and Astro, no templates. The CV exports to pixel-perfect PDF via a Puppeteer pipeline. Iterated with Claude Code."
   }
 }

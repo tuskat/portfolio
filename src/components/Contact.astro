@@ -18,10 +18,6 @@ const links = [
       <span class="lang-fr">{fr.contact.title}</span>
     </div>
     <hr class="div" />
-    <p class="intro reveal">
-      <span class="lang-en">{en.contact.intro}</span>
-      <span class="lang-fr">{fr.contact.intro}</span>
-    </p>
     <div class="links reveal">
       {links.map(l => (
         <a class="link-row" href={l.href} target={l.href.startsWith('mailto') ? undefined : '_blank'}>

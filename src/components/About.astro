@@ -16,7 +16,7 @@ import { en, fr } from '../i18n';
         <p><span class="lang-en" set:html={en.about.p3} /><span class="lang-fr" set:html={fr.about.p3} /></p>
       </div>
       <div class="about-photo reveal">
-        <img src="/assets/photo.svg" alt="Cédric Marcellin" width="400" height="400" />
+        <img src="/assets/photo.png" alt="Cédric Marcellin" width="400" height="400" />
       </div>
     </div>
   </div>
@@ -62,6 +62,8 @@ import { en, fr } from '../i18n';
   .about-photo {
     position: sticky;
     top: calc(var(--nav-h) + 32px);
+    overflow: hidden;
+    border-radius: 50%;
   }
   .about-photo img {
     width: 100%;

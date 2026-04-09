@@ -10,7 +10,7 @@
   "hero": {
     "badge": "Disponible",
     "subtitle": "Développeur Frontend Senior",
-    "tagline": "10+ ans à construire des produits web faits pour durer.<br/>Rails, React, Vue — ce que le projet demande.",
+    "tagline": "10+ ans à construire des produits web faits pour durer.<br/>Rails, React, Vue. Ce que le projet demande.",
     "ctaWork": "Voir mes projets",
     "ctaCV": "Télécharger le CV"
   },
@@ -33,7 +33,7 @@
         "company": "Network Guard",
         "client": "",
         "role": "Développeur Frontend Senior · CDI",
-        "desc": "prestataire d'ExpressVPN",
+        "desc": "prestataire de services pour ExpressVPN",
         "bullets": [
           "Refonte de l'interface V2 du firmware d'un routeur physique (Vue.js)",
           "Pilotage de plusieurs cycles de migration Rails → React sur les pages clients d'ExpressVPN",
@@ -62,9 +62,9 @@
   },
   "about": {
     "title": "À propos",
-    "p1": "J'ai passé une bonne partie de la dernière décennie à construire des produits web pour l'un des plus grands fournisseurs VPN au monde — en débutant comme junior et en finissant comme la personne que l'équipe appelait quand quelque chose brûlait. En chemin : migrations de frameworks, interfaces firmware, extensions navigateur, et plus de tunnels de conversion que je ne voudrais en compter.",
-    "p2": "En dehors du travail client, je développe des jeux sous <a href=\"https://tuskat.itch.io\" target=\"_blank\">tuskat</a> — trois titres publiés sur Phaser et Unity — et des applications utilitaires avec <a href=\"https://ottlerstudio.com\" target=\"_blank\">OttlerStudio</a>, parce que apparemment \"une bonne UI pour des outils ennuyeux\" m'intéresse vraiment. Je fais aussi de l'illustration numérique, surtout pour le plaisir.",
-    "p3": "Les meilleures choses que j'ai faites l'ont été dans des équipes où le <em>pourquoi</em> comptait autant que le <em>quand</em> — où la qualité du travail était valorisée, pas seulement la vitesse de livraison. Je ne cherche pas la prochaine licorne. Je cherche un endroit où bien faire les choses est une fin en soi, et où les gens autour de moi partagent ce point de vue."
+    "p1": "J'ai passé une bonne partie de la dernière décennie à construire des produits web pour l'un des plus grands fournisseurs VPN au monde, en débutant comme junior et en finissant comme la personne que l'équipe appelait quand quelque chose brûlait. En chemin : migrations de frameworks, interfaces firmware, extensions navigateur, et plus de tunnels de conversion que je ne voudrais en compter.",
+    "p2": "En dehors du travail client, je développe des jeux sous <a href=\"https://tuskat.itch.io\" target=\"_blank\">tuskat</a> (trois titres publiés sur Phaser et Unity) et des applications utilitaires avec <a href=\"https://ottlerstudio.com\" target=\"_blank\">OttlerStudio</a>, parce que apparemment \"une bonne UI pour des outils ennuyeux\" m'intéresse vraiment. Je fais aussi de l'illustration numérique, surtout pour le plaisir.",
+    "p3": "Les meilleures choses que j'ai faites l'ont été dans des équipes où le <em>pourquoi</em> comptait autant que le <em>quand</em>, où la qualité du travail était valorisée, pas seulement la vitesse de livraison. Je ne cherche pas la prochaine licorne. Je cherche un endroit où bien faire les choses est une fin en soi, et où les gens autour de moi partagent ce point de vue."
   },
   "skills": {
     "title": "Compétences",
@@ -77,8 +77,8 @@
   },
   "projects": {
     "title": "Projets",
-    "gamesLabel": "Jeux —",
-    "studioLabel": "Studio —",
+    "gamesLabel": "Jeux ·",
+    "studioLabel": "Studio ·",
     "tags": {
       "professional": "Professionnel",
       "nda": "NDA",
@@ -94,7 +94,7 @@
     },
     "rodent": {
       "title": "R0D3nt",
-      "desc": "Un platformer où les chances sont délibérément inégales — trop d'ennemis pour les affronter directement. Survivez en les attirant dans des pièges et vers des précipices."
+      "desc": "Un platformer où les chances sont délibérément inégales. Trop d'ennemis pour les affronter directement. Survivez en les attirant dans des pièges et vers des précipices."
     },
     "teddysCrew": {
       "title": "Teddy's Crew",
@@ -102,11 +102,11 @@
     },
     "roadToDakar": {
       "title": "Road to Dakar",
-      "desc": "Un jeu de course infini inspiré d'Outrun, mais avec un vrai terrain 3D et une physique automobile réelle — pas un défilement latéral sur un axe unique."
+      "desc": "Un jeu de course infini inspiré d'Outrun, mais avec un vrai terrain 3D et une physique automobile réelle, pas un défilement latéral sur un axe unique."
     },
     "ottlerstudio": {
       "title": "OttlerStudio",
-      "desc": "Une collection d'applications utilitaires à usage unique développées avec un ami — Générateur de mots de passe, Minuteur de cuisine, Lampe de poche, et plus. Le principe : faire une seule chose, avec une meilleure UX que ce qui existe déjà. En développement ; sortie en boutique à venir."
+      "desc": "Une collection d'applications utilitaires à usage unique développées avec un ami : Générateur de mots de passe, Minuteur de cuisine, Lampe de poche, et plus. Le principe : faire une seule chose, avec une meilleure UX que ce qui existe déjà. En développement ; sortie en boutique à venir."
     }
   },
   "testimonials": {
@@ -123,6 +123,6 @@
       "games": "Jeux",
       "studio": "Studio"
     },
-    "meta": "Ce portfolio et ce CV ont été construits en HTML/CSS et Astro — sans template. Le CV s'exporte en PDF pixel-perfect via un pipeline Puppeteer. Développé en itérant avec Claude Code."
+    "meta": "Ce portfolio et ce CV ont été construits en HTML/CSS et Astro, sans template. Le CV s'exporte en PDF pixel-perfect via un pipeline Puppeteer. Développé en itérant avec Claude Code."
   }
 }
