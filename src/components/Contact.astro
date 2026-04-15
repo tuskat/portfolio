@@ -1,13 +1,37 @@
 ---
-import { en, fr } from '../i18n';
+import { en, fr } from "../i18n";
 
 const links = [
-  { labelKey: 'email',        value: 'cedric.marcellin@gmail.com',                          href: 'mailto:cedric.marcellin@gmail.com' },
-  { labelKey: 'linkedin',     value: 'cedric-marcellin',                                    href: 'https://www.linkedin.com/in/cedric-marcellin-70317889/' },
-  { labelKey: 'github',       value: 'github.com/tuskat',                                   href: 'https://github.com/tuskat' },
-  { labelKey: 'illustration', value: 'cara.app/tuskat',                                     href: 'https://cara.app/tuskat' },
-  { labelKey: 'games',        value: 'tuskat.itch.io',                                      href: 'https://tuskat.itch.io' },
-  { labelKey: 'studio',       value: 'ottlerstudio.com',                                    href: 'https://ottlerstudio.com' },
+  {
+    labelKey: "email",
+    value: "cedric.marcellin@gmail.com",
+    href: "mailto:cedric.marcellin@gmail.com",
+  },
+  {
+    labelKey: "linkedin",
+    value: "cedric-marcellin",
+    href: "https://www.linkedin.com/in/cedric-marcellin-70317889/",
+  },
+  {
+    labelKey: "github",
+    value: "github.com/tuskat",
+    href: "https://github.com/tuskat",
+  },
+  {
+    labelKey: "illustration",
+    value: "cara.app/tuskat",
+    href: "https://cara.app/tuskat",
+  },
+  {
+    labelKey: "games",
+    value: "tuskat.itch.io",
+    href: "https://tuskat.itch.io",
+  },
+  {
+    labelKey: "studio",
+    value: "ottlerstudio.com",
+    href: "https://ottlerstudio.com",
+  },
 ] as const;
 ---
 
@@ -19,28 +43,41 @@ const links = [
     </div>
     <hr class="div" />
     <div class="links reveal">
-      {links.map(l => (
-        <a class="link-row" href={l.href} target={l.href.startsWith('mailto') ? undefined : '_blank'}>
-          <span class="link-label">
-            <span class="lang-en">{en.contact.labels[l.labelKey]}</span>
-            <span class="lang-fr">{fr.contact.labels[l.labelKey]}</span>
-          </span>
-          <span class="link-value">{l.value}</span>
-          <span class="link-arrow">↗</span>
-        </a>
-      ))}
+      {
+        links.map((l) => (
+          <a
+            class="link-row"
+            href={l.href}
+            target={l.href.startsWith("mailto") ? undefined : "_blank"}
+          >
+            <span class="link-label">
+              <span class="lang-en">{en.contact.labels[l.labelKey]}</span>
+              <span class="lang-fr">{fr.contact.labels[l.labelKey]}</span>
+            </span>
+            <span class="link-value">{l.value}</span>
+            <span class="link-arrow">↗</span>
+          </a>
+        ))
+      }
     </div>
 
     <p class="meta reveal">
       <span class="lang-en">{en.contact.meta}</span>
       <span class="lang-fr">{fr.contact.meta}</span>
-      {' '}<a href="https://github.com/tuskat" target="_blank">Source ↗</a>
+      {" "}<a href="https://github.com/tuskat" target="_blank">Source ↗</a>
     </p>
   </div>
 
   <div class="waves">
-    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,200 L0,165 C150,75 380,185 580,110 C780,40 1000,180 1180,115 C1330,65 1420,148 1440,140 L1440,200 Z" fill="#34554c" transform="scale(-1,1) translate(-1440,0)"/>
+    <svg
+      viewBox="0 0 1440 200"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0,200 L0,165 C150,75 380,185 580,110 C780,40 1000,180 1180,115 C1330,65 1420,148 1440,140 L1440,200 Z"
+        fill="#34554c"
+        transform="scale(-1,1) translate(-1440,0)"></path>
       <!-- <path d="M0,200 L0,183 C150,138 380,193 580,155 C780,120 1000,190 1180,158 C1330,133 1420,174 1440,170 L1440,200 Z" fill="#377968"/> -->
     </svg>
   </div>
@@ -48,18 +85,35 @@ const links = [
 </section>
 
 <style>
-  section { padding: 100px 0 0; background: var(--bg2); position: relative; }
+  section {
+    padding: 100px 0 0;
+    background: var(--bg2);
+    position: relative;
+  }
   .waves {
     height: 200px;
     pointer-events: none;
     overflow: hidden;
   }
-  .waves svg { width: 100%; height: 100%; }
+  .waves svg {
+    width: 100%;
+    height: 100%;
+  }
 
-  .section-wrap { padding-bottom: 60px; }
-  .intro { font-size: 16px; color: var(--text3); margin-bottom: 32px; }
+  .section-wrap {
+    padding-bottom: 60px;
+  }
+  .intro {
+    font-size: 16px;
+    color: var(--text3);
+    margin-bottom: 32px;
+  }
 
-  .links { display: flex; flex-direction: column; margin-bottom: 60px; }
+  .links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
   .link-row {
     display: flex;
     align-items: center;
@@ -69,21 +123,48 @@ const links = [
     color: var(--text);
     text-decoration: none;
   }
-  .link-row:hover { opacity: 1; }
-  .link-row:hover .link-label { color: var(--teal); }
-  .link-row:hover .link-arrow { opacity: 1; }
+  .link-row:hover {
+    opacity: 1;
+  }
+  .link-row:hover .link-label {
+    color: var(--teal);
+  }
+  .link-row:hover .link-arrow {
+    opacity: 1;
+  }
 
   .link-label {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
     color: var(--text3);
     letter-spacing: 0.5px;
-    width: 100px;
+    width: 75px;
     flex-shrink: 0;
     transition: color 0.15s;
   }
-  .link-value { font-size: 16px; color: var(--text); flex: 1; }
-  .link-arrow { font-size: 16px; color: var(--teal); opacity: 0; transition: opacity 0.15s; }
+
+  .link-value {
+    font-size: 14px;
+    color: var(--text);
+    flex: 1;
+  }
+
+  @media and screen (min-width: 600px) {
+    .link-label {
+      font-size: 13px;
+      width: 100px;
+    }
+
+    .link-value {
+      font-size: 16px;
+    }
+  }
+  .link-arrow {
+    font-size: 16px;
+    color: var(--teal);
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
 
   .meta {
     font-size: 13px;
@@ -91,8 +172,18 @@ const links = [
     line-height: 1.6;
     margin-bottom: 48px;
   }
-  .meta a { color: var(--text3); text-decoration: underline; text-underline-offset: 3px; }
-  .meta a:hover { color: var(--teal); opacity: 1; }
+  .meta a {
+    color: var(--text3);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .meta a:hover {
+    color: var(--teal);
+    opacity: 1;
+  }
 
-  .bottom-bar { background: var(--teal); height: 14px; }
+  .bottom-bar {
+    background: var(--teal);
+    height: 14px;
+  }
 </style>
