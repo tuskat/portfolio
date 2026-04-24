@@ -79,6 +79,7 @@
     "title": "Projets",
     "gamesLabel": "Jeux ·",
     "studioLabel": "Studio ·",
+    "openSourceLabel": "Open Source ·",
     "tags": {
       "professional": "Professionnel",
       "nda": "NDA",
@@ -91,6 +92,10 @@
     "expressvpn": {
       "title": "ExpressVPN Web Estate",
       "desc": "Plus de 10 ans de travail continu pour l'un des plus grands fournisseurs VPN au monde. Pages d'atterrissage, CMS interne, migrations de Rails à plusieurs générations de React, interface firmware de routeur et extension de gestionnaire de mots de passe. Des projets crédités pour des centaines de milliers de dollars d'impact sur les revenus."
+    },
+    "brise": {
+      "title": "Brise",
+      "desc": "Une plateforme auto-hébergée pour proxifier et orchestrer plusieurs backends LLM. Interface à base de personas avec réglage des hyperparamètres, chat multi-tours, un terrain de jeu pour prompts uniques, et un journal de requêtes SQLite avec tableau de bord de métriques."
     },
     "rodent": {
       "title": "R0D3nt",

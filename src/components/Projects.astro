@@ -34,6 +34,29 @@ const games = [
       </div>
     </div>
 
+    <!-- Brise -->
+    <div class="sub-title reveal">
+      <span class="lang-en">{en.projects.openSourceLabel}</span>
+      <span class="lang-fr">{fr.projects.openSourceLabel}</span>
+      {' '}<a href="https://github.com/tuskat/brise" target="_blank">github.com/tuskat/brise</a>
+    </div>
+    <div class="brise-card reveal">
+      <img src="/assets/projects/brise-dashboard.png" alt="Brise" class="brise-img" width="1200" height="675" />
+      <div class="featured-body">
+        <div class="card-tags">
+          <span class="tag">Open Source</span>
+        </div>
+        <h3>{en.projects.brise.title}</h3>
+        <p>
+          <span class="lang-en">{en.projects.brise.desc}</span>
+          <span class="lang-fr">{fr.projects.brise.desc}</span>
+        </p>
+        <div class="stack-row">
+          {['Astro', 'Node.js', 'SQLite', 'JavaScript', 'Docker'].map(s => <span class="chip">{s}</span>)}
+        </div>
+      </div>
+    </div>
+
     <!-- Games -->
     <div class="sub-title reveal">
       <span class="lang-en">{en.projects.gamesLabel}</span>
@@ -128,6 +151,15 @@ const games = [
 
   .featured-noimg { grid-template-columns: 1fr !important; }
   .featured-noimg .featured-body { max-width: 640px; }
+  .brise-card {
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--bg2);
+  }
+  .brise-img { width: 100%; height: 100%; object-fit: cover; display: block; object-position: top left; }
 
   .featured {
     display: grid;

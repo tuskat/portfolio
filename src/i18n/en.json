@@ -79,6 +79,7 @@
     "title": "Projects",
     "gamesLabel": "Games ·",
     "studioLabel": "Studio ·",
+    "openSourceLabel": "Open Source ·",
     "tags": {
       "professional": "Professional",
       "nda": "NDA",
@@ -91,6 +92,10 @@
     "expressvpn": {
       "title": "ExpressVPN Web Estate",
       "desc": "10+ years of continuous work on one of the world's largest VPN providers. Customer landing pages, internal CMS, framework migrations from Rails through multiple generations of React, router firmware UI, and a browser-based password manager extension. Projects credited with driving hundreds of thousands in revenue impact."
+    },
+    "brise": {
+      "title": "Brise",
+      "desc": "A self-hosted platform for proxying and orchestrating multiple LLM backends. Persona-driven interface with hyperparameter tuning, multi-turn chat, a single-shot playground, and a SQLite-backed request log with metrics dashboard."
     },
     "rodent": {
       "title": "R0D3nt",
