@@ -4,7 +4,7 @@
     "about": "À propos",
     "projects": "Projets",
     "testimonials": "Recommandations",
-    "contact": "Contact",
+    "contact": "Contacte",
     "downloadCV": "Télécharger le CV"
   },
   "hero": {
@@ -118,7 +118,7 @@
     "title": "Recommandations"
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contacte",
     "intro": "Pas de formulaire. Choisissez simplement votre canal préféré.",
     "labels": {
       "email": "Email",
