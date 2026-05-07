@@ -10,7 +10,7 @@
 /assets/photo.webp
   Cache-Control: public, max-age=2592000
 
-/fonts/*
+/fonts/*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/*.pdf

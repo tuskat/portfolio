@@ -16,7 +16,14 @@ const { title = 'Cédric Marcellin, Senior Frontend Developer' } = Astro.props;
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cedricmarcellin.dev" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="stylesheet" href="/fonts/raleway.css" />
+  <link rel="preload"
+      as="style"
+      href="/fonts/raleway.css"
+      onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="/fonts/raleway.css">
+  </noscript>
 </head>
 <body class="lang-en">
   <main>
