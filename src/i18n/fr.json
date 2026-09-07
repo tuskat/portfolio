@@ -56,7 +56,9 @@
         "client": "",
         "role": "Développeur Frontend",
         "desc": "startup d'outils collaboratifs",
-        "bullets": []
+        "bullets": [
+          "Développement du frontend d'un éditeur de documents collaboratif"
+        ]
       }
     ]
   },

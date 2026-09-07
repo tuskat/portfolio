@@ -56,7 +56,9 @@
         "client": "",
         "role": "Frontend Developer",
         "desc": "collaborative workspace startup",
-        "bullets": []
+        "bullets": [
+          "Built the frontend of a collaborative document editor"
+        ]
       }
     ]
   },
