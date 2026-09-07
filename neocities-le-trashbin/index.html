@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Trashbin, Den of Le Tuskat ┬┴┬┴┤•ᴥ•ʔ├┬┴┬┴</title>
+    <link href="./style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <div class="desktop">
+      <div class="window">
+        <div class="titlebar">
+          <div class="title">
+            <span>Le Trashbin</span>
+          </div>
+          <div class="titlebtns">
+            <button type="button" aria-label="Minimize" id="btnMin">_</button>
+            <button type="button" aria-label="Maximize" id="btnMax">&#9633;</button>
+            <button type="button" aria-label="Close" id="btnClose">X</button>
+          </div>
+        </div>
+
+        <div class="content">
+          <header class="masthead">
+            <img src="/pfp.png" alt="Tuskat profile picture" class="pfp">
+            <div>
+              <h1>Tuskat</h1>
+              <p class="tag">Game dev | Artist | Bear Emoji Conoisseur ʕ·ᴥ·　ʔ</p>
+            </div>
+          </header>
+
+          <div class="blurb">
+            <img src="/PR_Header.png" alt="Teddy's Horde" class="horde-img">
+            <p>
+              <span class="horde-text">
+                I made <strong>Teddy's Horde</strong> <br/><br/> a top-down arena roguelike where you slap
+                back against fish wardens. Dash through the arena as a powerful bear warrior,
+                unlock and learn new instincts, all to outlive your own execution.
+                Solo or in 4 player local coop.
+              </span>
+            </p>
+          </div>
+
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/QOSevhZLjzI?si=3wj5M3oIAaJ2pfOo"
+              title="Teddy's Horde trailer" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="links">
+            <a class="btn" href="https://store.steampowered.com/app/4939220/Teddys_Horde/">
+              <span class="ic">&#9654;</span> Teddy's Horde on Steam
+            </a>
+          </div>
+
+          <div class="channels">
+            <a href="https://bsky.app/profile/tuskat.itch.io">bluesky</a>
+            <a href="https://x.com/tuskat_dev">twitter</a>
+            <a href="https://www.youtube.com/@tuskat">youtube</a>
+            <a href="https://cara.app/tuskat">cara</a>
+            <span class="copyright">Tuskat &#169; 2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      const win = document.querySelector('.window');
+      const titlebar = document.querySelector('.titlebar');
+      const btnMin = document.getElementById('btnMin');
+      const btnMax = document.getElementById('btnMax');
+      const btnClose = document.getElementById('btnClose');
+
+      let maximized = false;
+
+      btnMin.addEventListener('click', () => {
+        win.classList.toggle('minimized');
+        win.classList.remove('maximized');
+        maximized = false;
+      });
+
+      btnMax.addEventListener('click', () => {
+        maximized = !maximized;
+        if (maximized) {
+          win.classList.add('maximized');
+          win.classList.remove('minimized');
+          win.style.top = '';
+          win.style.left = '';
+          win.style.transform = '';
+        } else {
+          win.classList.remove('maximized');
+          restorePos();
+        }
+      });
+
+      btnClose.addEventListener('click', () => {
+        win.classList.add('closed');
+      });
+
+      // drag by titlebar
+      let dragging = false;
+      let offX = 0, offY = 0;
+
+      titlebar.addEventListener('mousedown', (e) => {
+        if (e.target.closest('.titlebtns')) return;
+        if (maximized) return;
+        dragging = true;
+        win.setAttribute('data-dragged', '1');
+        const r = win.getBoundingClientRect();
+        offX = e.clientX - r.left;
+        offY = e.clientY - r.top;
+        win.style.margin = '0';
+        win.style.transform = '';
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (!dragging) return;
+        win.style.left = (e.clientX - offX) + 'px';
+        win.style.top = (e.clientY - offY) + 'px';
+      });
+
+      document.addEventListener('mouseup', () => { dragging = false; });
+
+      function restorePos() {
+        win.classList.remove('minimized', 'closed');
+        win.style.top = '';
+        win.style.left = '';
+        win.style.margin = '';
+        win.style.transform = '';
+        // keep centered horizontally if never dragged
+        if (!win.getAttribute('data-dragged')) {
+          win.style.left = '50%';
+          win.style.transform = 'translateX(-50%)';
+        }
+      }
+      restorePos();
+    </script>
+  </body>
+</html>
