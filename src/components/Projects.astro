@@ -16,20 +16,50 @@ const games = [
     </h2>
     <hr class="div" />
 
-    <!-- Professional -->
-    <div class="featured featured-noimg reveal">
+    <!-- Teddy's Horde -->
+    <div class="sub-title sub-title-first reveal">
+      <span class="lang-en">Steam</span>
+      <span class="lang-fr">Steam</span>
+      {' '}<a href="https://store.steampowered.com/app/4939220/Teddys_Horde/" target="_blank">store.steampowered.com/app/4939220/Teddys_Horde</a>
+    </div>
+    <div class="featured reveal">
+      <img src="/assets/projects/teddys-horde.webp" alt="Teddy's Horde" class="featured-img" width="630" height="500" />
       <div class="featured-body">
         <div class="card-tags">
-          <span class="tag"><span class="lang-en">{en.projects.tags.professional}</span><span class="lang-fr">{fr.projects.tags.professional}</span></span>
-          <span class="tag tag-nda">{en.projects.tags.nda}</span>
+          <span class="tag"><span class="lang-en">{en.projects.tags.game}</span><span class="lang-fr">{fr.projects.tags.game}</span></span>
+          <span class="tag tag-commercial">Commercial</span>
         </div>
-        <h3>{en.projects.expressvpn.title}</h3>
+        <h3>{en.projects.teddysHorde.title}</h3>
         <p>
-          <span class="lang-en">{en.projects.expressvpn.desc}</span>
-          <span class="lang-fr">{fr.projects.expressvpn.desc}</span>
+          <span class="lang-en">{en.projects.teddysHorde.desc}</span>
+          <span class="lang-fr">{fr.projects.teddysHorde.desc}</span>
         </p>
         <div class="stack-row">
-          {['Ruby on Rails', 'Vue.js', 'React', 'Angular', 'TypeScript', 'Node.js', 'Astro'].map(s => <span class="chip">{s}</span>)}
+          {['Unity', 'C#'].map(s => <span class="chip">{s}</span>)}
+        </div>
+      </div>
+    </div>
+
+    <!-- OttlerStudio -->
+    <div class="sub-title reveal">
+      <span class="lang-en">{en.projects.studioLabel}</span>
+      <span class="lang-fr">{fr.projects.studioLabel}</span>
+      {' '}<a href="https://ottlerstudio.com" target="_blank">ottlerstudio.com</a>
+    </div>
+    <div class="featured reveal">
+      <img src="/assets/projects/ottlerstudio.webp" alt="OttlerStudio" class="featured-img" width="800" height="450" />
+      <div class="featured-body">
+        <div class="card-tags">
+          <span class="tag"><span class="lang-en">{en.projects.tags.mobile}</span><span class="lang-fr">{fr.projects.tags.mobile}</span></span>
+          <span class="tag tag-wip"><span class="lang-en">{en.projects.tags.wip}</span><span class="lang-fr">{fr.projects.tags.wip}</span></span>
+        </div>
+        <h3>{en.projects.ottlerstudio.title}</h3>
+        <p>
+          <span class="lang-en">{en.projects.ottlerstudio.desc}</span>
+          <span class="lang-fr">{fr.projects.ottlerstudio.desc}</span>
+        </p>
+        <div class="stack-row">
+          {['Flutter', 'Dart'].map(s => <span class="chip">{s}</span>)}
         </div>
       </div>
     </div>
@@ -95,30 +125,6 @@ const games = [
       })}
     </div>
 
-    <!-- OttlerStudio -->
-    <div class="sub-title reveal">
-      <span class="lang-en">{en.projects.studioLabel}</span>
-      <span class="lang-fr">{fr.projects.studioLabel}</span>
-      {' '}<a href="https://ottlerstudio.com" target="_blank">ottlerstudio.com</a>
-    </div>
-    <div class="featured reveal">
-      <img src="/assets/projects/ottlerstudio.webp" alt="OttlerStudio" class="featured-img" width="800" height="450" />
-      <div class="featured-body">
-        <div class="card-tags">
-          <span class="tag"><span class="lang-en">{en.projects.tags.mobile}</span><span class="lang-fr">{fr.projects.tags.mobile}</span></span>
-          <span class="tag tag-wip"><span class="lang-en">{en.projects.tags.wip}</span><span class="lang-fr">{fr.projects.tags.wip}</span></span>
-        </div>
-        <h3>{en.projects.ottlerstudio.title}</h3>
-        <p>
-          <span class="lang-en">{en.projects.ottlerstudio.desc}</span>
-          <span class="lang-fr">{fr.projects.ottlerstudio.desc}</span>
-        </p>
-        <div class="stack-row">
-          {['Flutter', 'Dart'].map(s => <span class="chip">{s}</span>)}
-        </div>
-      </div>
-    </div>
-
   </div>
   <div class="wave">
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,6 +154,7 @@ const games = [
     margin-top: 56px;
   }
   .sub-title a { color: var(--teal); }
+  .sub-title-first { margin-top: 0; }
 
   .featured-noimg { grid-template-columns: 1fr !important; }
   .featured-noimg .featured-body { max-width: 640px; }
@@ -196,6 +203,7 @@ const games = [
   }
   .tag-nda { border-color: rgba(255,100,100,0.3); color: rgba(255,120,120,0.8); }
   .tag-wip { border-color: rgba(255,180,50,0.3); color: rgba(255,180,50,0.8); }
+  .tag-commercial { border-color: rgba(255,255,255,0.3); color: var(--text2); }
 
   h3 { font-size: 18px; font-weight: 500; color: var(--text); }
   p { font-size: 14px; color: var(--text2); line-height: 1.7; }
