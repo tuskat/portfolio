@@ -71,7 +71,7 @@
     "groups": [
       { "label": "Frontend",        "skills": ["JavaScript", "TypeScript", "Vue.js", "React", "Angular", "Astro", "Sass / CSS"] },
       { "label": "Backend",         "skills": ["Ruby on Rails", "Node.js", "Express.js", ".NET Core"] },
-      { "label": "Mobile & Autre",  "skills": ["Flutter", "Unity / C#", "Phaser (2 & 3)"] },
+      { "label": "Mobile & Autre",  "skills": ["Flutter", "Unity / C#", "Godot / GDScript", "Phaser (2 & 3)"] },
       { "label": "Outils",          "skills": ["Git", "REST APIs", "Crowdin", "Puppeteer", "Figma"] }
     ]
   },
